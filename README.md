@@ -47,7 +47,7 @@ chmod +x uninstall.sh
 wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-NC-WG-Installscript/main/install.sh
 ```
 
-#### Zet de rechten juist om hem te kunnen te kunnen uitvoeren:
+#### Zet de rechten juist om hem te kunnen uitvoeren:
 
 ```bash
 chmod +x install.sh
@@ -94,7 +94,7 @@ Edit daar de locatie van je certificaten:
 systemctl restart apache2
 ```
 
-### Automatisch een HTTP GET request door sturen naar HTTPS:
+### Automatisch een HTTP request door sturen naar HTTPS:
 
 ```bash
 Nano /etc/apache2/sites-available/000-default.conf
