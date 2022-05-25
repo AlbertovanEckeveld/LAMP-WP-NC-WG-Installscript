@@ -122,6 +122,7 @@ echo '<?PHP Phpinfo();?>' > /var/www/html/info.php;
 ufw allow "Apache Full";
 ufw allow OpenSSH;
 ufw allow enable;
+ufw allow 51820/udp
 
 # --------- End Firewall ---------
 
@@ -176,6 +177,27 @@ systemctl restart apache2;
 # Restart & test apache2
 service apache2 restart;
 apache2ctl configtest;
+
+# Wireguard install & configuration
+
+apt install wireguard;
+
+wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
+
+chmod 600 /etc/wireguard/{privatekey,wg0.conf}
+
+wg-quick up wg0
+ip a show wg0
+
+cat > /etc/wireguard/wg0.conf << ENDOFFILE
+[Interface]
+Address = 10.0.10.1/24
+SaveConfig = true
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+ListenPort = 51820
+PrivateKey = SERVER PRIVATE KEY
+ENDOFFILE
 
 # Remove unused downloaded files
 rm -dr /tmp/nextcloud

@@ -70,7 +70,7 @@ In het begin zal er 1 keer om een goedkeuring gevraagd worden. Klik Enter en hij
 
 #### Vragen voor Certificaat namen:
 
-De volgende vraag zal zijn: "Naam voor certificaten .key & .crt opgeslagen in /etc/ssl" In de opdracht staat dat je je studentennummer moet gebruiken, ik zal dat lekker doen. 
+De volgende vraag zal zijn: **"Naam voor certificaten .key & .crt opgeslagen in /etc/ssl"** In de opdracht staat dat je je studentennummer moet gebruiken, ik zal dat lekker doen. 
 
 De certificaten zijn opgeslagen in /etc/ssl/private/filename.key en /etc/ssl/certs/filename.crt
 
@@ -139,6 +139,35 @@ define( 'DB_COLLATE', '' );
 #### Restart Apache2
 ```
 systemctl restart apache2
+```
+
+### Nextcloud:
+
+#### Private key
+
+##### Voeg de Private key toe aan de netwerk kaart configuratie:
+```bash
+nano /etc/wireguard/wg0.conf
+```
+Verander "SERVER PRIVATE KEY" met ->
+```
+cat /etc/wireguard/privatekey
+```
+
+##### IP Forwarding accepteren
+
+```bash
+nano /etc/sysctl.conf
+```
+Uncomment de 25e regel:
+```
+net.ipv4.ip_forward=1
+```
+
+##### Accepteer de client public key
+
+```
+wg set wg0 peer CLIENT_PUBLIC_KEY allowed-ips 10.0.10.10
 ```
 
 ### Inlog gegevens:
