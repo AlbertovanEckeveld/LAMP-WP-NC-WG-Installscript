@@ -1,4 +1,6 @@
-# Het installeren van Apache2, Mysql, PHP, Wordpress, nextcloud, Wireguard
+# Installatie script
+
+Bij het uitvoeren van de onderstaande commando's installeer je: LAMP, Nextcloud, Wordpress, WireGuard 
 
 ## Deïnstalleren van mogelijke bestaande services:
 
