@@ -136,10 +136,6 @@ define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
 ```
-#### Restart Apache2
-```
-systemctl restart apache2
-```
 
 ### Nextcloud:
 
