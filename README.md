@@ -1,6 +1,6 @@
 # Het installeren van Apache2, Mysql, PHP, Wordpress, nextcloud, Wireguard
 
-## Installatie:
+## Deïnstalleren van mogelijke bestaande services:
 
 Misschien heb je nog wat verdwaalde Apache2 (of andere) service draaien of geinstalleerd staan. Die kunnen we verwijderen door de uninstall script te gebruiken: 
 
@@ -35,3 +35,25 @@ chmod +x uninstall.sh
 ```
 ./uninstall.sh
 ```
+
+## Installatie via script:
+
+### Download de install.sh script
+#### Hier heb je de keuze om Curl of Wget te gebruiken, maakt nu niet uit welke je gebruikt. In dit voorbeeld gaan we voor Wget.
+
+```
+wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-PMA-NC-WG-Installscript/main/install.sh
+```
+
+#### Zet de rechten juist om hem te kunnen te kunnen uitvoeren:
+
+```
+chmod +x install.sh
+```
+
+#### Hem vervolgens uitvoeren:
+
+```
+./install.sh
+```
+
