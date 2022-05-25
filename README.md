@@ -85,8 +85,8 @@ Nano /etc/apache2/sites-available/default-ssl.conf
 ```
 Edit daar de locatie van je certificaten:
 ```
-/etc/ssl/private/filename.key
-/etc/ssl/certs/filename.crt
+/etc/ssl/private/filename-key.key
+/etc/ssl/certs/filename-cert.crt
 ```
 
 #### Restart Apache2
