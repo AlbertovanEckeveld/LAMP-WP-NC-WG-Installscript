@@ -66,7 +66,7 @@ chmod +x install.sh
 ### Tijdens de installatie:
 
 #### Goedkeuring vraag
-In het begin zal er 1 keer om een goedkeuring gevraagd worden. Klik Enter en hij zal verder doen. Verder zal hij op alle installatie vragen: "Do you want to continue? [Y / n]" automatisch Accepteren.
+In het begin zal er 1 keer om een goedkeuring gevraagd worden voor het installeren van PHP pakketten. Klik Enter en hij zal verder doen. Verder zal hij op alle installatie vragen: "Do you want to continue? [Y / n]" automatisch Accepteren.
 
 #### Vragen voor Certificaat namen:
 

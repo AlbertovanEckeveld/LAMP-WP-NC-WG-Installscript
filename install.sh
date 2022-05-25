@@ -3,8 +3,8 @@
 # FRESH INSTALL OF LAMP SERVER IN UBUNTU 22.04+
 # THIS WILL INSTALL PHP (VERSIONS) 
 # BEFORE RUNNING THIS SCRIPT, MAKE SURE YOU ENTIRELY REMOVED ANY PREVIOUS APACHE-PHP-MYSQL INSTALLATION
-# YOU CAN ALSO USE REMOVAL SCRIPT: lamp_uninstall.sh
-# VERSION 1.0 19 MEI 2022
+# YOU CAN ALSO USE REMOVAL SCRIPT: uninstall.sh
+# VERSION 1.0 25 MEI 2022
 
 # Script validation checks
 if [ "$(id -u)" != "0"]; then
@@ -180,14 +180,9 @@ apache2ctl configtest;
 
 # Wireguard install & configuration
 
-apt install wireguard;
+apt-get -y install wireguard;
 
 wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
-
-chmod 600 /etc/wireguard/{privatekey,wg0.conf}
-
-wg-quick up wg0
-ip a show wg0
 
 cat > /etc/wireguard/wg0.conf << ENDOFFILE
 [Interface]
@@ -198,6 +193,11 @@ PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -
 ListenPort = 51820
 PrivateKey = SERVER PRIVATE KEY
 ENDOFFILE
+
+chmod 600 /etc/wireguard/{privatekey,wg0.conf}
+
+wg-quick up wg0
+ip a show wg0
 
 # Remove unused downloaded files
 rm -dr /tmp/nextcloud
