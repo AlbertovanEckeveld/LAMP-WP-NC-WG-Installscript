@@ -59,7 +59,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Lees bij: Belangrijke Informatie wat er te doen is tijdens de installatie script bezig is.
+**Lees bij: Belangrijke Informatie wat er te doen is tijdens de installatie script bezig is.**
 
 ## Belangrijke Informatie:
 
