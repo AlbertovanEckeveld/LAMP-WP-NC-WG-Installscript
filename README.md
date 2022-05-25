@@ -23,7 +23,7 @@ sudo su
 #### Hier heb je de keuze om Curl of Wget te gebruiken, maakt nu niet uit welke je gebruikt. In dit voorbeeld gaan we voor Wget.
 
 ```bash
-wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-PMA-NC-WG-Installscript/main/uninstall.sh
+wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-NC-WG-Installscript/main/uninstall.sh
 ```
 
 #### Zet de rechten juist om hem te kunnen te kunnen uitvoeren:
@@ -44,7 +44,7 @@ chmod +x uninstall.sh
 #### Hier heb je de keuze om Curl of Wget te gebruiken, maakt nu niet uit welke je gebruikt. In dit voorbeeld gaan we voor Wget.
 
 ```bash
-wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-PMA-NC-WG-Installscript/main/install.sh
+wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-NC-WG-Installscript/main/install.sh
 ```
 
 #### Zet de rechten juist om hem te kunnen te kunnen uitvoeren:
