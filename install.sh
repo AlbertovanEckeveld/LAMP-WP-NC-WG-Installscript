@@ -40,7 +40,7 @@ add-apt-repository universe;
 apt-get -y install php7.4 libapache2-mod-php7.4 php7.4-mysql php7.4-common php7.4-gd php7.4-mbstring php7.4-fpm php7.4-json php7.4 php7.4-xml php7.4-xmlrpc php7.4-intl php7.4-curl php7.4-zip php7.4-imagick;
 
 # Install phpmyadmin and its dependencies
-apt-get -y install phpmyadmin php7.1-mbstring php7.0-mbstring php5.6-mbstring php-gettext;
+#apt-get -y install phpmyadmin php7.1-mbstring php7.0-mbstring php5.6-mbstring php-gettext;
 
 # --------- End Installs ---------
 
@@ -67,7 +67,7 @@ rpl "www-data" $2 /etc/php/5.6/fpm/pool.d/www.conf;
 rpl "www-data" $2 /etc/apache2/envvars;
 
 # Include phpMyadmin configuration file
-echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf;
+#echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf;
 
 # Enable mod modules
 a2enmod ssl
@@ -184,4 +184,4 @@ rm /tmp/latest.tar.gz
 rm /tmp/latest.tar.bz2
 
 # Done message
-echo "You have successfully installed LAMP on your Ubuntu server";
+echo "You have successfully installed LAMP + nextcloud + Wireguard on your Ubuntu server";
