@@ -14,6 +14,24 @@ sudo passwd root
 #### Switch User -> root
 
 ```
-sudo su
+sudo su 
 ```
 
+### Download de uninstall.sh script
+#### Hier heb je de keuze om Curl of Wget te gebruiken, maakt nu niet uit welke je gebruikt. In dit voorbeeld gaan we voor Wget.
+
+```
+wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-PMA-NC-WG-Installscript/main/uninstall.sh
+```
+
+#### Zet de rechten juist om hem te kunnen te kunnen uitvoeren:
+
+```
+chmod +x uninstall.sh
+```
+
+#### Hem vervolgens uitvoeren:
+
+```
+./uninstall.sh
+```
