@@ -163,6 +163,10 @@ net.ipv4.ip_forward=1
 ##### Accepteer de client public key
 
 ```
+wg-quick up wg0
+```
+
+```
 wg set wg0 peer CLIENT_PUBLIC_KEY allowed-ips 10.0.10.10
 ```
 
