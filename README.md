@@ -26,7 +26,7 @@ sudo su
 wget https://raw.githubusercontent.com/AlbertovanEckeveld/LAMP-WP-NC-WG-Installscript/main/uninstall.sh
 ```
 
-#### Zet de rechten juist om hem te kunnen te kunnen uitvoeren:
+#### Zet de rechten juist om hem te kunnen uitvoeren:
 
 ```bash
 chmod +x uninstall.sh
